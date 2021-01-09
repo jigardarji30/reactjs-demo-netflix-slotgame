@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ReactDOM from 'react-dom'
+import Card from "./Card";
+import './index.css';
+import data from "./netflixData";
+import googleData from "./googleData";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () =>{
+    return(
+        <div>
+            <h1 className="heading_style">List of top nexflix series in 2021</h1>
+
+
+            {data.map((val)=>{
+                console.log(val);
+                return(
+                    <Card 
+                    key={val.id}
+                    imgsrc={val.imgsrc} 
+                    title={val.title} 
+                    sname={val.sname} 
+                    link={val.link} />
+                
+                );
+            })}
+        </div>
+    )
+}
+
+
+const AppGoogle = () =>{
+    return(
+        <div>
+            <h1 className="heading_style">List of Google Product</h1>
+
+
+            {googleData.map((val)=>{
+                console.log(val);
+                return(
+                    <Card 
+                    key={val.id}
+                    imgsrc={val.imgsrc} 
+                    title={val.title} 
+                    sname={val.sname} 
+                    link={val.link} />
+                
+                );
+            })}
+        </div>
+    )
 }
 
 export default App;
+
+
+   
+
+  
