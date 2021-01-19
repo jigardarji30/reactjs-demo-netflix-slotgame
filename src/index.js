@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom'
 import App from "./App";
-import SlotM from "./SlotM";
 import Google from "./GoogleProduct";
 
 
@@ -12,7 +11,6 @@ ReactDOM.render(
     <>
         <App />
         {/* <Google /> */}
-        <SlotM />
 
         {/* {(series == 'netflix') ? 'Netflix' : 'Amazon'} */}
     </>

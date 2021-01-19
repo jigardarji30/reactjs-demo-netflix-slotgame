@@ -7,86 +7,81 @@ import googleData from "./googleData";
 import Counter from './hooks/counter';
 import HandlingEvents from './hooks/handlingEvents';
 import BasicForm from "./form/basicForm";
+import SlotM from "./SlotM";
 
 
 const App = () => {
 
-    function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
+  return (
+    <div>
 
-    return (
-        <div>
-
-<div className="tab">
-  <button className="tablinks" onClick={openCity('London')}>London</button>
-  <button className="tablinks" onClick={openCity('Paris')}>Paris</button>
-  <button className="tablinks" onClick={openCity('Tokyo')}>Tokyo</button>
-</div>
-
-<div id="London" className="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
-</div>
-
-<div id="Paris" className="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
-</div>
-
-<div id="Tokyo" className="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
-</div>
-
-
-        <div style={{ display: 'block', clear: 'both' }}>
+      <ul className="nav nav-tabs" role="tablist">
+        <li className="nav-item">
+          <a className="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Card</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" data-toggle="tab" href="#tabs-2" role="tab">Slot Machine</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" data-toggle="tab" href="#tabs-3" role="tab">Counter</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" data-toggle="tab" href="#tabs-4" role="tab">HandlingEvents</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" data-toggle="tab" href="#tabs-5" role="tab">BasicForm</a>
+        </li>
+      </ul>
+      <div className="tab-content">
+        <div className="tab-pane active" id="tabs-1" role="tabpanel">
+          <div style={{ display: 'block', clear: 'both' }}>
             <h1 className="heading_style">List of top nexflix series in 2021</h1>
 
-
             {data.map((val) => {
-                console.log(val);
-                return (
-                    <Card
-                        key={val.id}
-                        imgsrc={val.imgsrc}
-                        title={val.title}
-                        sname={val.sname}
-                        link={val.link} />
+              console.log(val);
+              return (
+                <Card
+                  key={val.id}
+                  imgsrc={val.imgsrc}
+                  title={val.title}
+                  sname={val.sname}
+                  link={val.link} />
 
-                );
+              );
             })}
+          </div>
         </div>
-        <div style={{ display: 'block', clear: 'both' }}>
+        <div className="tab-pane" id="tabs-2" role="tabpanel">
+          <div style={{ display: 'block', clear: 'both' }}>
+            <SlotM />
+          </div>
+        </div>
+
+        <div className="tab-pane" id="tabs-3" role="tabpanel">
+          <div style={{ display: 'block', clear: 'both' }}>
             <h1 className="heading_style">Get Time</h1>
 
-            <Counter/>
-           
-        </div>
-        <div style={{ display: 'block', clear: 'both' }}>
+            <Counter />
 
-            <HandlingEvents/>
-           
+          </div>
         </div>
-        <div style={{ display: 'block', clear: 'both' }}>
+        <div className="tab-pane" id="tabs-4" role="tabpanel">
+          <div style={{ display: 'block', clear: 'both' }}>
 
-            <BasicForm/>
-           
-        </div>
+            <HandlingEvents />
 
-        
+          </div>
         </div>
-    )
+        <div className="tab-pane" id="tabs-5" role="tabpanel">
+          <div style={{ display: 'block', clear: 'both' }}>
+
+            <BasicForm />
+
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 
 
