@@ -8,6 +8,7 @@ import Counter from './hooks/counter';
 import HandlingEvents from './hooks/handlingEvents';
 import BasicForm from "./form/basicForm";
 import SlotM from "./SlotM";
+import TodoList from "./todolist/todolist";
 
 
 const App = () => {
@@ -30,6 +31,9 @@ const App = () => {
         </li>
         <li className="nav-item">
           <a className="nav-link" data-toggle="tab" href="#tabs-5" role="tab">BasicForm</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" data-toggle="tab" href="#tabs-6" role="tab">TodoList</a>
         </li>
       </ul>
       <div className="tab-content">
@@ -76,6 +80,13 @@ const App = () => {
           <div style={{ display: 'block', clear: 'both' }}>
 
             <BasicForm />
+
+          </div>
+        </div>
+        <div className="tab-pane" id="tabs-6" role="tabpanel">
+          <div style={{ display: 'block', clear: 'both' }}>
+
+            <TodoList />
 
           </div>
         </div>
