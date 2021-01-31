@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
 import Card from "./Card";
 import './index.css';
 import data from "./netflixData";
@@ -9,6 +8,10 @@ import HandlingEvents from './hooks/handlingEvents';
 import BasicForm from "./form/basicForm";
 import SlotM from "./SlotM";
 import TodoList from "./todolist/todolist";
+import Incdec from "./todolist/incdec";
+import Google from "./GoogleProduct";
+
+const series = 'netflix';
 
 
 const App = () => {
@@ -35,6 +38,9 @@ const App = () => {
         <li className="nav-item">
           <a className="nav-link" data-toggle="tab" href="#tabs-6" role="tab">TodoList</a>
         </li>
+        <li className="nav-item">
+          <a className="nav-link" data-toggle="tab" href="#tabs-7" role="tab">Inc Dec</a>
+        </li>
       </ul>
       <div className="tab-content">
         <div className="tab-pane active" id="tabs-1" role="tabpanel">
@@ -51,8 +57,13 @@ const App = () => {
                   sname={val.sname}
                   link={val.link} />
 
-              );
-            })}
+                  );
+                  
+                })}
+                <googleData/>
+                <Google />
+
+                 {(series === 'netflix') ? 'Netflix' : 'Amazon'}
           </div>
         </div>
         <div className="tab-pane" id="tabs-2" role="tabpanel">
@@ -87,7 +98,12 @@ const App = () => {
           <div style={{ display: 'block', clear: 'both' }}>
 
             <TodoList />
+          </div>
+        </div>
+        <div className="tab-pane" id="tabs-7" role="tabpanel">
+          <div style={{ display: 'block', clear: 'both' }}>
 
+            <Incdec />
           </div>
         </div>
       </div>

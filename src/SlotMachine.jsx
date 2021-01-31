@@ -6,7 +6,7 @@ const SlotM = (props)=>{
 
     let {x,y,z} = props;
 
-    if(x == y && y==z){
+    if(x === y && y===z){
         return (
             <>
             <div className="slot_inner">

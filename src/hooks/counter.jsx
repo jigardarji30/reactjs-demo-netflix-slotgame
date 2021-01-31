@@ -1,7 +1,6 @@
 import React,{useState} from "react";
 import './counter.css';
 
-let count = 0;
 let dateTime;
 let timeOnRefresh;
 
