@@ -36,10 +36,7 @@ const App = () => {
           <a className="nav-link" data-toggle="tab" href="#tabs-5" role="tab">BasicForm</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" data-toggle="tab" href="#tabs-6" role="tab">TodoList</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" data-toggle="tab" href="#tabs-7" role="tab">Inc Dec</a>
+          <a className="nav-link" data-toggle="tab" href="#tabs-6" role="tab">TodoList and Inc Dec</a>
         </li>
       </ul>
       <div className="tab-content">
@@ -98,12 +95,8 @@ const App = () => {
           <div style={{ display: 'block', clear: 'both' }}>
 
             <TodoList />
-          </div>
-        </div>
-        <div className="tab-pane" id="tabs-7" role="tabpanel">
-          <div style={{ display: 'block', clear: 'both' }}>
-
             <Incdec />
+
           </div>
         </div>
       </div>
