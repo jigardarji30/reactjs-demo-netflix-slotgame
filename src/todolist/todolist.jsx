@@ -7,7 +7,6 @@ const ToDoList = ()=>{
    const [items,setItems] = useState([]); 
 
     const itenEvent = (e) => {
-        console.log(e);
         setinputList(e.target.value);
     }
 

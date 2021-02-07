@@ -9,7 +9,6 @@ const AppGoogle = () => {
 
 
             {googleData.map((val) => {
-                console.log(val);
                 return (
                     <Card
                         key={val.id}

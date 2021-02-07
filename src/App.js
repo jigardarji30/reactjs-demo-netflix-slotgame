@@ -2,7 +2,6 @@ import React from 'react';
 import Card from "./Card";
 import './index.css';
 import data from "./netflixData";
-import googleData from "./googleData";
 import Counter from './hooks/counter';
 import HandlingEvents from './hooks/handlingEvents';
 import BasicForm from "./form/basicForm";
@@ -10,6 +9,7 @@ import SlotM from "./SlotM";
 import TodoList from "./todolist/todolist";
 import Incdec from "./todolist/incdec";
 import Google from "./GoogleProduct";
+import Gkeep from "./keep/Gkeep";
 
 const series = 'netflix';
 
@@ -18,7 +18,6 @@ const App = () => {
 
   return (
     <div>
-
       <ul className="nav nav-tabs" role="tablist">
         <li className="nav-item">
           <a className="nav-link active" data-toggle="tab" href="#tabs-1" role="tab">Card</a>
@@ -38,6 +37,9 @@ const App = () => {
         <li className="nav-item">
           <a className="nav-link" data-toggle="tab" href="#tabs-6" role="tab">TodoList and Inc Dec</a>
         </li>
+        <li className="nav-item">
+          <a className="nav-link" data-toggle="tab" href="#tabs-7" role="tab">Keep Note</a>
+        </li>
       </ul>
       <div className="tab-content">
         <div className="tab-pane active" id="tabs-1" role="tabpanel">
@@ -45,7 +47,6 @@ const App = () => {
             <h1 className="heading_style">List of top nexflix series in 2021</h1>
 
             {data.map((val) => {
-              console.log(val);
               return (
                 <Card
                   key={val.id}
@@ -57,7 +58,6 @@ const App = () => {
                   );
                   
                 })}
-                <googleData/>
                 <Google />
 
                  {(series === 'netflix') ? 'Netflix' : 'Amazon'}
@@ -96,6 +96,13 @@ const App = () => {
 
             <TodoList />
             <Incdec />
+
+          </div>
+        </div>
+        <div className="tab-pane" id="tabs-7" role="tabpanel">
+          <div style={{ display: 'block', clear: 'both' }}>
+
+            <Gkeep />
 
           </div>
         </div>
