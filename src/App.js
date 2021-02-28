@@ -10,6 +10,7 @@ import TodoList from "./todolist/todolist";
 import Incdec from "./todolist/incdec";
 import Google from "./GoogleProduct";
 import Gkeep from "./keep/Gkeep";
+import ContextCom from "./contexts/ContenxtCom";
 
 const series = 'netflix';
 
@@ -39,6 +40,9 @@ const App = () => {
         </li>
         <li className="nav-item">
           <a className="nav-link" data-toggle="tab" href="#tabs-7" role="tab">Keep Note</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" data-toggle="tab" href="#tabs-8" role="tab">Contexts</a>
         </li>
       </ul>
       <div className="tab-content">
@@ -103,6 +107,13 @@ const App = () => {
           <div style={{ display: 'block', clear: 'both' }}>
 
             <Gkeep />
+
+          </div>
+        </div>
+        <div className="tab-pane" id="tabs-8" role="tabpanel">
+          <div style={{ display: 'block', clear: 'both' }}>
+
+            <ContextCom />
 
           </div>
         </div>
