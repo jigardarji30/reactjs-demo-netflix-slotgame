@@ -9,7 +9,7 @@ const ContextCom = () => {
     const [nums,setNums] = useState(0);
 
     useEffect(()=>{
-        alert('clicked');
+        // alert('clicked');
     },[num])
     
 return (

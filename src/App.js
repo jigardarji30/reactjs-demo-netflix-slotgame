@@ -11,6 +11,10 @@ import Incdec from "./todolist/incdec";
 import Google from "./GoogleProduct";
 import Gkeep from "./keep/Gkeep";
 import ContextCom from "./contexts/ContenxtCom";
+import AxiosDemo from "./axios/Axios";
+import {BrowserRouter} from "react-router-dom";
+import RouteDemo from "./Route/Route";
+
 
 const series = 'netflix';
 
@@ -43,6 +47,12 @@ const App = () => {
         </li>
         <li className="nav-item">
           <a className="nav-link" data-toggle="tab" href="#tabs-8" role="tab">Contexts</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" data-toggle="tab" href="#tabs-9" role="tab">Axios</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" data-toggle="tab" href="#tabs-10" role="tab">Route</a>
         </li>
       </ul>
       <div className="tab-content">
@@ -114,6 +124,22 @@ const App = () => {
           <div style={{ display: 'block', clear: 'both' }}>
 
             <ContextCom />
+
+          </div>
+        </div>
+        <div className="tab-pane" id="tabs-9" role="tabpanel">
+          <div style={{ display: 'block', clear: 'both' }}>
+
+            <AxiosDemo />
+
+          </div>
+        </div>
+        <div className="tab-pane" id="tabs-10" role="tabpanel">
+          <div style={{ display: 'block', clear: 'both' }}>
+
+            <BrowserRouter>
+             <RouteDemo />
+            </BrowserRouter>
 
           </div>
         </div>
