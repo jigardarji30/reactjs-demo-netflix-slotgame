@@ -14,6 +14,7 @@ import ContextCom from "./contexts/ContenxtCom";
 import AxiosDemo from "./axios/Axios";
 import {BrowserRouter} from "react-router-dom";
 import RouteDemo from "./Route/Route";
+import Wether from "./wether/Wether";
 
 
 const series = 'netflix';
@@ -54,6 +55,10 @@ const App = () => {
         <li className="nav-item">
           <a className="nav-link" data-toggle="tab" href="#tabs-10" role="tab">Route</a>
         </li>
+        <li className="nav-item">
+          <a className="nav-link" data-toggle="tab" href="#tabs-11" role="tab">Wether</a>
+        </li>
+        
       </ul>
       <div className="tab-content">
         <div className="tab-pane active" id="tabs-1" role="tabpanel">
@@ -143,6 +148,14 @@ const App = () => {
 
           </div>
         </div>
+        <div className="tab-pane" id="tabs-11" role="tabpanel">
+          <div style={{ display: 'block', clear: 'both' }}>
+
+             <Wether />
+
+          </div>
+        </div>
+        
       </div>
     </div>
   )
